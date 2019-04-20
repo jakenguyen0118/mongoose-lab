@@ -1,21 +1,5 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-## Prerequisites
-
-- ERDs
-- Express
-- MongoDB
-- Mongoose
-
-## Instructions
-
-1. Fork and clone this repository.
-2. Change into the new directory.
-3. Install dependencies.
-4. Fulfill the listed requirements.
-
-Please turn in your submission by the deadline on your cohort calendar.
-
 ## Requirements
 
 Describe behavioral requirements as you'll be using them in tests. That is, list
@@ -48,15 +32,28 @@ Plagiarized work will not be accepted.
 
 # YUM!
 
-For Homework you will be writing a node application to practice using Mongoose.
-You task: create an app that tracks and stores Restaurants and Menu Items.
+We will be writing a node application to practice using Mongoose.
+Your task: create an app that tracks and stores Restaurants and Menu Items.
 
-## Setup
+We will be providing you seed data, and part of the assignment is determining the best way to write the models. Often in the real world we engineers we have to determine the best way to integrate exist datasets with our applications, and today we are fortunate in that we have full freedom to make our Models work with our data.
 
-Fork and clone this repo. Then run `$ npm install` to install all the modules
-listed in `package.json`.
+## Prerequisites
 
-You can test your code by running `$ nodemon index.js` in the Terminal.
+- ERDs
+- Express
+- MongoDB
+- Mongoose
+
+## Instructions
+
+1. Fork and clone this repository.
+2. Change into the new directory.
+3. Install dependencies.
+4. Fulfill the listed requirements.
+
+You can test your code by running `nodemon` in the Terminal.
+
+Please turn in your submission by the deadline on your cohort calendar.
 
 ## Part I: Mongoose
 
@@ -67,17 +64,17 @@ using Mongoose queries. You should not be using Express yet.
 
 2. Adds seed data for the restaurant and menu items...
 
-- A restaurant should have the following field names...
+   - A restaurant should have the following field names...
 
-  - `name` - a string
-  - `address` - an object with a `street` (string) and `zipcode` property
-    (number)
-  - `yelpUrl` - a string
-  - `items` - an array containing your MenuItems schema
+   - `name` - a string
+   - `address` - an object with a `street` (string) and `zipcode` property
+     (number)
+   - `yelpUrl` - a string
+   - `items` - an array containing your MenuItems schema
 
-- A menu item should contain the followin...
+   - A menu item should contain the followin...
 
-  - `title` - a string
+   - `title` - a string
 
 3. Create a new restaurant.
 
@@ -90,12 +87,12 @@ using Mongoose queries. You should not be using Express yet.
 7. Write a function or method that deletes a restaurant.
 
 8. Write methods to add and remove embedded menu item documents for a
-    restaurant of your choosing.
+   restaurant of your choosing.
 
-## Part II: Add Express
+## Bonus: Add Express
 
-> You will know how to do this after Monday morning's Express + Mongoose lesson.
-> Feel free, however, to give this a shot over the weekend.
+> You will know how to do this after the Express + Mongoose lesson.
+> Feel free, however, to give this a shot!
 
 Turn YUM into an Express app with routes that you can view in your browser and
 forms that manipulate your data with full CRUD.
