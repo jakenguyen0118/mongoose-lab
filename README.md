@@ -34,7 +34,8 @@ Please turn in your submission by the deadline on your cohort calendar.
 You'll begin by creating an app that performs CRUD functionality on a database
 using Mongoose queries. You should not be using Express yet.
 
-1. Create schemas and corresponding models for a restaurant and for menu items.
+1. Create a `models/` directory, and create the schemas and corresponding models
+   for a _restaurant_ and for _menu items_.
 
 2. In `db/seed.js`, write the logic to use the data in `db/seedData.json` to
    seed the database.
