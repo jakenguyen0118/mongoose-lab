@@ -1,14 +1,14 @@
 {
   "name": "yum",
   "version": "1.0.0",
-  "description": "YUM!  Cookies!",
+  "description": "YUM! Cookies!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "WDI8",
+  "author": "GA DC",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^4.4.11"
+    "mongoose": "^5.5.2"
   }
 }
