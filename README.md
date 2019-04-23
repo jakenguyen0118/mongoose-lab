@@ -37,6 +37,19 @@ using Mongoose queries. You should not be using Express yet.
 1. Create a `models/` directory, and create the schemas and corresponding models
    for a _restaurant_ and for _menu items_.
 
+Looking at the seed data, it could be a good idea to treat the Menu Item model as a _nested subdocument_ of the Restaurant model.
+
+Here's an example of this pattern (via [Mongoose Documentation](https://mongoosejs.com/docs/subdocs.html)):
+
+```js
+const childSchema = new Schema({ name: "string" });
+
+const parentSchema = new Schema({
+  // Array of subdocuments
+  children: [childSchema]
+});
+```
+
 2. In `db/seed.js`, write the logic to use the data in `db/seedData.json` to
    seed the database.
 
