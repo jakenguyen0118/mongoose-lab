@@ -25,7 +25,7 @@ our data.
 3. Install dependencies.
 4. Fulfill the listed requirements.
 
-You can test your code by running `nodemon` in the Terminal.
+You can test your code by running `node index.js` in the Terminal.
 
 Please turn in your submission by the deadline on your cohort calendar.
 
@@ -55,15 +55,13 @@ const parentSchema = new Schema({
 
 3. Run `node db/seed.js` to seed the database.
 
-4. In `index.js` write a function for each of the following to add CRUD functionality to our models. HINT: these functions should implement the Mongoose model methods:
+4. In `index.js` write a function for each of the following to add CRUD functionality to Restaurnt models. HINT: these functions should implement the Mongoose model methods:
 
 - [ ] Create a new restaurant
 - [ ] Find (aka "get") a restaurant by `name`
 - [ ] Find all restaurants by `zipCode`
-- [ ] Update a restaurant
+- [ ] Update a restaurant (any and/or all fields BESIDES items)
 - [ ] Delete a restaurant
-- [ ] Add a menu item from a restaurant
-- [ ] Remove a menu item a restaurant
 
 For this lab, we can test these methods by invoking them at the bottom of the `index.js` and running the file with `node index.js`. Feel free to use either `console.log` or the Mongo CLI to check the functions are working correctly.
 
@@ -71,7 +69,15 @@ When thinking about how to write these fuctions, consider the arguments you want
 
 This high-level thinking is important! Taking the time to plan what you want to do before writing the code makes the entire process go smoothly, and often organizations want to know _why_ you make decisions as much as _how_ you solve problems.
 
-## Bonus: Add Express
+## Bonuses
+
+### Add methods for the Menu Items
+
+- [ ] Add a menu item from a restaurant
+- [ ] Update menu item from a restaurant
+- [ ] Remove a menu item a restaurant
+
+### Add Express
 
 > You will know how to do this after the Express + Mongoose lesson. Feel free,
 > however, to give this a shot!
