@@ -42,15 +42,21 @@ using Mongoose queries. You should not be using Express yet.
 
 3. Run `node db/seed.js` to seed the database.
 
-4. In `index.js` write functions/methods for each of the following CRUD actions:
+4. In `index.js` write a function for each of the following to add CRUD functionality to our models. HINT: these functions should implement the Mongoose model methods:
 
-- Create a new restaurant
-- Find (aka Get) a restaurant by `name`
-- Find all restaurants by `zipCode`
-- Update a restaurant
-- Delete a restaurant
-- Add a menu item from a restaurant
-- Remove a menu item a restaurant
+- [ ] Create a new restaurant
+- [ ] Find (aka "get") a restaurant by `name`
+- [ ] Find all restaurants by `zipCode`
+- [ ] Update a restaurant
+- [ ] Delete a restaurant
+- [ ] Add a menu item from a restaurant
+- [ ] Remove a menu item a restaurant
+
+For this lab, we can test these methods by invoking them at the bottom of the `index.js` and running the file with `node index.js`. Feel free to use either `console.log` or the Mongo CLI to check the functions are working correctly.
+
+When thinking about how to write these fuctions, consider the arguments you want to pass to each function. For example, you might only need the `restaurantName` for the "Find" method, but to "Update" you might also need another argument that has the new data you want to update...
+
+This high-level thinking is important! Taking the time to plan what you want to do before writing the code makes the entire process go smoothly, and often organizations want to know _why_ you make decisions as much as _how_ you solve problems.
 
 ## Bonus: Add Express
 
