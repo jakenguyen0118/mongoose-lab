@@ -6,8 +6,8 @@ We will be writing a node application to practice using Mongoose. Your task:
 create an app that tracks and stores Restaurants and Menu Items.
 
 We will be providing you seed data, and part of the assignment is determining
-the best way to write the models. Often in the real world we engineers we have
-to determine the best way to integrate exist datasets with our applications, and
+the best way to write the models. Often in the real world we engineers have
+to determine the best way to integrate existing datasets with our applications, and
 today we are fortunate in that we have full freedom to make our Models work with
 our data.
 
