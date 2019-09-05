@@ -59,7 +59,7 @@ const parentSchema = new Schema({
 
 - [ ] Create a new restaurant
 - [ ] Find (aka "get") a restaurant by `name`
-- [ ] Find all restaurants by `zipCode`
+- [ ] Find one of the restaurants by `zipCode` (just try one of the zipcodes from the JSON seeding data)
 - [ ] Update a restaurant (any and/or all fields BESIDES items)
 - [ ] Delete a restaurant
 
