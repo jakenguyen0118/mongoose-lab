@@ -27,7 +27,6 @@ our data.
 
 You can test your code by running `node index.js` in the Terminal.
 
-Please turn in your submission by the deadline on your cohort calendar.
 
 ## Requirements
 
