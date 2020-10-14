@@ -13,7 +13,6 @@ our data.
 
 ## Prerequisites
 
-- ERDs
 - Express
 - MongoDB
 - Mongoose
@@ -25,18 +24,58 @@ our data.
 3. Install dependencies.
 4. Fulfill the listed requirements.
 
-You can test your code by running `node index.js` in the Terminal.
-
-
 ## Requirements
 
 You'll begin by creating an app that performs CRUD functionality on a database
-using Mongoose queries. You should not be using Express yet.
+using Mongoose queries. You should `NOT` be using Express yet.
 
-1. Create a `models/` directory, and create the schemas and corresponding models
-   for a _restaurant_ and for _menu items_.
+### DB Connection
 
-Looking at the seed data, it could be a good idea to treat the Menu Item model as a _nested subdocument_ of the Restaurant model.
+Setup the `connection` to the db which connects to a db called `yum`
+
+### Models
+Create a `models/` directory, and create the schemas/model for a `restaurant`. 
+
+### Seeding Data
+
+In `db/seed.js`, write the logic to use the data in `db/seedData.json` to create the initial seed data and populate the db. Make sure to run the file and confirm the data has been created. 
+
+### Controllers 
+
+Create a `controllers` directory and a `restaurant.js` file.  Write a function for each of the following to add CRUD functionality to Restaurant model. 
+
+
+- [ ] Create a new restaurant
+- [ ] Find (aka "get") a restaurant by `name`
+- [ ] Find one of the restaurants by `zipCode` (just try one of the zipcodes from the JSON seeding data)
+- [ ] Update a restaurant (any and/or all fields BESIDES items)
+- [ ] Delete a restaurant
+
+For this lab, we can test these methods by invoking them in the controllers file.  
+
+When thinking about how to write these functions, consider the arguments you want to pass to each function. For example, you might only need the `restaurantName` for the "Find" method, but to "Update" you might also need another argument that has the new data you want to update...
+
+
+### Add Express
+
+> You will know how to do this after the Express + Mongoose lesson. Feel free,
+> however, to give this a shot!
+
+Turn YUM into an Express app with routes that you can view in your browser and
+forms that manipulate your data with full CRUD.
+
+| **URL** | **HTTP Verb** | Action |
+|------------|-------------|-------------|
+| /restaurants      | GET       |  it should get all restaurants from the db and return them as json
+| /restaurants        | POST       |  it should add a new restaurant to the db and return the entire list as json
+| /restaurants /:id      | GET       | it should get that individual restaurant to the db  and return as json
+| /restaurants /:id      | PUT       | it should update the individual restaurant to the db  and return as it json
+| /restaurants /:id      | DELETE      | it should delete the individual restaurant to the db  and return the entire list as json 
+
+
+## Bonus - Nested Documents
+
+Looking at the seed data, it could be a good idea to treat the Menu Item model as a `nested subdocument` of the Restaurant model.
 
 Here's an example of this pattern (via [Mongoose Documentation](https://mongoosejs.com/docs/subdocs.html)):
 
@@ -48,61 +87,3 @@ const parentSchema = new Schema({
   children: [childSchema]
 });
 ```
-
-2. In `db/seed.js`, write the logic to use the data in `db/seedData.json` to
-   seed the database.
-
-3. Run `node db/seed.js` to seed the database.
-
-4. In `index.js` write a function for each of the following to add CRUD functionality to Restaurnt models. HINT: these functions should implement the Mongoose model methods:
-
-- [ ] Create a new restaurant
-- [ ] Find (aka "get") a restaurant by `name`
-- [ ] Find one of the restaurants by `zipCode` (just try one of the zipcodes from the JSON seeding data)
-- [ ] Update a restaurant (any and/or all fields BESIDES items)
-- [ ] Delete a restaurant
-
-For this lab, we can test these methods by invoking them at the bottom of the `index.js` and running the file with `node index.js`. Feel free to use either `console.log` or the Mongo CLI to check the functions are working correctly.
-
-When thinking about how to write these fuctions, consider the arguments you want to pass to each function. For example, you might only need the `restaurantName` for the "Find" method, but to "Update" you might also need another argument that has the new data you want to update...
-
-This high-level thinking is important! Taking the time to plan what you want to do before writing the code makes the entire process go smoothly, and often organizations want to know _why_ you make decisions as much as _how_ you solve problems.
-
-## Bonuses
-
-### Add methods for the Menu Items
-
-- [ ] Add a menu item from a restaurant
-- [ ] Update menu item from a restaurant
-- [ ] Remove a menu item a restaurant
-
-### Add Express
-
-> You will know how to do this after the Express + Mongoose lesson. Feel free,
-> however, to give this a shot!
-
-Turn YUM into an Express app with routes that you can view in your browser and
-forms that manipulate your data with full CRUD.
-
-Your app should have two pages...
-
-1. A page that lists all restaurants, on which a user can create a new
-   restaurant.
-2. A page that lists one restaurant and all its menu items, on which a user can:
-
-- Delete the restaurant.
-- Update the restaurant.
-- Create a new menu item for the restaurant.
-- Delete a menu item from the restaurant.
-
-## Plagiarism
-
-Take a moment to refamiliarize yourself with the
-[Plagiarism policy](https://git.generalassemb.ly/DC-WDI/Administrative/blob/master/plagiarism.md).
-Plagiarized work will not be accepted.
-
-## [License](LICENSE)
-
-1. All content is licensed under a CC­BY­NC­SA 4.0 license.
-2. All software code is licensed under GNU GPLv3. For commercial use or
-   alternative licensing, please contact legal@ga.co.
