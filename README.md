@@ -31,14 +31,14 @@ using Mongoose queries. You should `NOT` be using Express yet.
 
 ### DB Connection
 
-Setup the `connection` to the db which connects to a db called `yum`
+Setup the `connection` to the db which connects to a db called `yum` and all other supporting code. 
 
 ### Models
-Create a `models/` directory, and create the schemas/model for a `restaurant`. 
+Create a `models/` directory, and create the schemas/model for a `restaurant` using the structure of the objects in the seedData.json file as your guide. 
 
 ### Seeding Data
 
-In `db/seed.js`, write the logic to use the data in `db/seedData.json` to create the initial seed data and populate the db. Make sure to run the file and confirm the data has been created. 
+In `db/seed.js`, import  `db/seedData.json` and write the logic to create the initial seed data and populate the db. Make sure to run the file and confirm the data has been created. 
 
 ### Controllers 
 
@@ -56,13 +56,12 @@ For this lab, we can test these methods by invoking them in the controllers file
 When thinking about how to write these functions, consider the arguments you want to pass to each function. For example, you might only need the `restaurantName` for the "Find" method, but to "Update" you might also need another argument that has the new data you want to update...
 
 
-### Add Express
+### Bonus - Add Express
 
 > You will know how to do this after the Express + Mongoose lesson. Feel free,
 > however, to give this a shot!
 
-Turn YUM into an Express app with routes that you can view in your browser and
-forms that manipulate your data with full CRUD.
+Turn YUM into an Express API with routes that return data based on a url. 
 
 | **URL** | **HTTP Verb** | Action |
 |------------|-------------|-------------|
