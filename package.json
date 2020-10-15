@@ -4,11 +4,12 @@
   "description": "YUM! Cookies!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:seed": "node ./db/seed.js"
   },
   "author": "GA DC",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^5.5.2"
+    "mongoose": "^5.10.9"
   }
 }
