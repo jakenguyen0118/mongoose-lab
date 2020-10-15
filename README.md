@@ -3,7 +3,7 @@
 # YUM!
 
 We will be writing a node application to practice using Mongoose. Your task:
-create an app that tracks and stores Restaurants and Menu Items.
+create an app that tracks and stores Restaurants and their menu items.
 
 We will be providing you seed data, and part of the assignment is determining
 the best way to write the models. Often in the real world we engineers have
@@ -40,6 +40,8 @@ Create a `models/` directory, and create the schemas/model for a `restaurant` us
 
 In `db/seed.js`, import  `db/seedData.json` and write the logic to create the initial seed data and populate the db. Make sure to run the file and confirm the data has been created. 
 
+Update `package.json` to include a new `db:seed` startup script. 
+
 ### Controllers 
 
 Create a `controllers` directory and a `restaurant.js` file.  Write a function for each of the following to add CRUD functionality to Restaurant model. 
@@ -51,17 +53,14 @@ Create a `controllers` directory and a `restaurant.js` file.  Write a function f
 - [ ] Update a restaurant (any and/or all fields BESIDES items)
 - [ ] Delete a restaurant
 
-For this lab, we can test these methods by invoking them in the controllers file.  
+For this lab, you can test these function by invoking them in the controllers file to confirm them work. 
 
-When thinking about how to write these functions, consider the arguments you want to pass to each function. For example, you might only need the `restaurantName` for the "Find" method, but to "Update" you might also need another argument that has the new data you want to update...
+When thinking about how to write these functions, consider the arguments you want to pass to each function. For example, you might only need the `restaurantName` for the "Find" method, but to "Update" you might also need another argument that has the new data you want to update.
 
 
 ### Bonus - Add Express
 
-> You will know how to do this after the Express + Mongoose lesson. Feel free,
-> however, to give this a shot!
-
-Turn YUM into an Express API with routes that return data based on a url. 
+Turn YUM into an Express API with routes that return data based on a url. This means creating a `server.js` file and setting up express.
 
 | **URL** | **HTTP Verb** | Action |
 |------------|-------------|-------------|
@@ -72,9 +71,9 @@ Turn YUM into an Express API with routes that return data based on a url.
 | /restaurants /:id      | DELETE      | it should delete the individual restaurant to the db  and return the entire list as json 
 
 
-## Bonus - Nested Documents
+## Super Bonus - Nested Documents
 
-Looking at the seed data, it could be a good idea to treat the Menu Item model as a `nested subdocument` of the Restaurant model.
+Looking at the seed data, it might be a good idea to create a new `Menu Item` model as a `nested subdocument` of the `Restaurant` model.  Several menu items are servered in multiple restaurants and having a single reference to them would allow for a single point of reference if they ever needed to be updated. 
 
 Here's an example of this pattern (via [Mongoose Documentation](https://mongoosejs.com/docs/subdocs.html)):
 
